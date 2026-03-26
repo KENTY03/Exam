@@ -26,7 +26,7 @@ public class FrontController extends HttpServlet {
 
             // ④ クラス名に変換
             // 例：Search.action → SearchAction
-            String name = path.replace(".a", "A").replace('/', '.');
+            String name = "beauty." + path.replace(".a", "A").replace('/', '.');
 
             // ⑤ クラスを生成（リフレクション）
             Action action = (Action)Class.forName(name)
